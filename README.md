@@ -5,8 +5,8 @@
 - [x] Make it deploy
 - [x] Scaffold basic ui with mock data
 - [x] Tidy up build process
-- [ ] Set up DB
-- [ ] Attach database to UI
+- [x] Set up DB
+- [x] Attach database to UI
 - [ ] Auth
 - [ ] Add image upload
 - [ ] Error management
