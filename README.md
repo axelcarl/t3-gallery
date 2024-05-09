@@ -9,7 +9,7 @@
 - [x] Attach database to UI
 - [x] Auth
 - [x] "taint" (server-only)
-- [ ] Add image upload
+- [x] Add image upload
 - [ ] Error management
 - [ ] Routing
 - [ ] Delete Button (w/ Server Actions)
