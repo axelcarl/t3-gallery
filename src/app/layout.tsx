@@ -9,30 +9,34 @@ import { ourFileRouter } from "./api/uploadthing/core";
 import { extractRouterConfig } from "uploadthing/server";
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
+    subsets: ["latin"],
+    variable: "--font-sans",
 });
 
 export const metadata = {
-  title: "The Gallery",
-  description: "Modern Gallery, Created by Axel",
-  icons: [{ rel: "icon", url: "/favicon.ico" }],
+    title: "The Gallery",
+    description: "Modern Gallery, Created by Axel",
+    icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
 export default function RootLayout({
-  children,
+    children,
+    modal
 }: {
-  children: React.ReactNode;
+    children: React.ReactNode;
+    modal: React.ReactNode;
 }) {
-  return (
-    <ClerkProvider>
-      <html lang="en">
-        <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
-        <body className={`font-sans ${inter.variable} flex flex-col gap-4`}>
-          <TopNav />
-          {children}
-        </body>
-      </html>
-    </ClerkProvider>
-  );
+    return (
+        <ClerkProvider>
+            <html lang="en">
+                <NextSSRPlugin routerConfig={extractRouterConfig(ourFileRouter)} />
+                <body className={`font-sans ${inter.variable} flex flex-col gap-4`}>
+                    <TopNav />
+                    {children}
+                    {modal}
+                    <div id="modal-route" />
+                </body>
+            </html>
+        </ClerkProvider>
+    );
 }

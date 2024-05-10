@@ -10,7 +10,7 @@
 - [x] Auth
 - [x] "taint" (server-only)
 - [x] Add image upload
-- [ ] Error management
+- [x] Error management
 - [ ] Routing
 - [ ] Delete Button (w/ Server Actions)
 - [ ] Analytics
